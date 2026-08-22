@@ -1,0 +1,44 @@
+name: Work node
+description: Focused execution-graph issue with scope, non-goals, risks, and acceptance tests
+title: "[ID]: "
+labels: []
+body:
+  - type: input
+    id: node_id
+    attributes:
+      label: Node ID
+      description: ID from docs/AUTONOMOUS_EXECUTION.md
+      placeholder: S1
+    validations:
+      required: true
+  - type: textarea
+    id: depends
+    attributes:
+      label: Depends on
+      placeholder: F0 (merged)
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+    validations:
+      required: true
+  - type: textarea
+    id: non_goals
+    attributes:
+      label: Non-goals
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance tests
+    validations:
+      required: true

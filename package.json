@@ -1,0 +1,19 @@
+{
+  "name": "evidenceops-legal",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Continuous legal-research and citation-integrity system",
+  "packageManager": "pnpm@10.14.0",
+  "engines": {
+    "node": ">=20 <21",
+    "pnpm": ">=10"
+  },
+  "scripts": {
+    "test": "pnpm --filter @evidenceops/foundation test",
+    "typecheck": "pnpm --filter @evidenceops/foundation typecheck",
+    "verify": "bash scripts/verify.sh"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  }
+}
