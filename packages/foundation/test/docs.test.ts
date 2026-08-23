@@ -20,6 +20,9 @@ const REQUIRED_DOCS = [
   "docs/adr/README.md",
   "docs/adr/0000-template.md",
   "docs/research/courtlistener-terms.md",
+  "docs/adr/0007-apache-2.0.md",
+  "docs/adr/0008-courtlistener-blocked.md",
+  "LICENSE",
 ] as const;
 
 describe("required documentation", () => {

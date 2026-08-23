@@ -36,11 +36,10 @@ External papers motivate the benchmark; they are not EvidenceOps performance cla
 
 ## Repository status
 
-Foundation work is in progress under issue [#1](https://github.com/kishuxz/evidence-ops/issues/1)
-(node F0). Product runtime, connectors, and schemas are not on `main` until their nodes
-merge. See `docs/PROGRESS.md`.
+Foundation work F0–G1 is merged. See `docs/PROGRESS.md`. v0.1 is not complete.
 
-A software license has **not** been selected. See `docs/LICENSE_STATUS.md`.
+Licensed under Apache License 2.0. See `LICENSE` and `docs/LICENSE_STATUS.md`.
+The networked CourtListener adapter is blocked; see ADR 0008.
 
 ## Verification
 

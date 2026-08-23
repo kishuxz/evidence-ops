@@ -1,15 +1,8 @@
 # License status
 
-A software license for this repository is not selected.
+EvidenceOps Legal is licensed under the **Apache License, Version 2.0**. See `LICENSE`.
 
-`docs/AUTONOMOUS_EXECUTION.md` requires human direction for license selection. Agents must
-not invent an MIT, Apache, GPL, or other grant.
-
-Until a human records a decision in an ADR and adds a `LICENSE` file:
-
-- the repository remains private unpublished source
-- no public package or release may proceed (Z2 stop condition)
-- third parties have no license to use, copy, or distribute the software
-
-This is an explicit escalation, not an implied proprietary license grant beyond keeping
-the work unpublished until decided.
+A human selected Apache-2.0 on 2026-08-22 (ADR 0007, superseding ADR 0004). Public
+package publication, public GitHub visibility changes, and deployment still require
+separate human authorization (Z2). Live legal-data sources require documented
+authorization before any networked connector (ADR 0008).

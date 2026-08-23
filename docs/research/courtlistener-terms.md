@@ -26,7 +26,16 @@ source as the first connector. CourtListener is operated by Free Law Project
 
 Terms last modified dates observed: Terms of Service 2026-08-05; Privacy Policy 2026-07-29.
 
-## Open questions (human direction before D1)
+## Decision (2026-08-22)
+
+A human directed that EvidenceOps **must not** call, scrape, authenticate to, or build a
+live CourtListener/RECAP connector until written authorization or an appropriate
+agreement with Free Law Project. Personal, educational, membership, MCP, and API
+credentials must not power the product.
+
+See ADR 0008. D1 is fixture-only. Fixture corpora are not live CourtListener coverage.
+
+## Open questions (remain for a future live adapter ADR)
 
 1. Is EvidenceOps' intended hosted demo and product use inside membership "exploratory/research" use, or does it require a Free Law Project commercial/partnership agreement?
 2. Which CourtListener datasets are in scope for v0.1 (opinion clusters/opinions only vs RECAP PACER documents)?
