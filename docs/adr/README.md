@@ -25,3 +25,6 @@ Record durable choices that later nodes must not silently reverse.
 | 0007 | Apache License 2.0 | Accepted |
 | 0008 | CourtListener live adapter blocked; D1 fixture-only | Accepted |
 | 0009 | In-memory graph store, JSON/JSONL, adapter contract | Accepted with G2 |
+| 0010 | Initial evaluation corpus is synthetic and incomplete | Accepted with E1 |
+| 0011 | In-process auth, RBAC, audit, and approval policy | Accepted with A1 |
+| 0012 | Source-neutral fixture connector (no live CourtListener) | Accepted with D1 |
