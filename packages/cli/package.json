@@ -1,0 +1,40 @@
+{
+  "name": "@evidenceops/cli",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Locally packaged EvidenceOps CLI. Not published to npm.",
+  "type": "module",
+  "bin": {
+    "evidenceops": "./dist/evidenceops.js"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "dist",
+    "schemas",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "prepack": "node scripts/build.mjs",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@evidenceops/auth": "workspace:*",
+    "@evidenceops/authority": "workspace:*",
+    "@evidenceops/connector": "workspace:*",
+    "@evidenceops/eval": "workspace:*",
+    "@evidenceops/graph": "workspace:*",
+    "@evidenceops/monitor": "workspace:*",
+    "@evidenceops/obs": "workspace:*",
+    "@evidenceops/retrieve": "workspace:*",
+    "@evidenceops/reviewer": "workspace:*",
+    "@evidenceops/verify": "workspace:*",
+    "@types/node": "^20.19.0",
+    "esbuild": "^0.25.9",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}
