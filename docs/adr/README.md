@@ -30,4 +30,5 @@ Record durable choices that later nodes must not silently reverse.
 | 0012 | Source-neutral fixture connector (no live CourtListener) | Accepted with D1 |
 | 0013 | Fixture-backed citation identity | Accepted with R1 |
 | 0014 | Deterministic proposition verification | Accepted with V1 |
-| 0015 | Offline hybrid retrieval | Proposed with X1 |
+| 0015 | Offline hybrid retrieval | Accepted with X1 |
+| 0016 | Optional Neo4j adapter | Proposed with G3 |

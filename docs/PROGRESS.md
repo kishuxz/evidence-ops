@@ -13,7 +13,7 @@ Do not mark a node `merged` until the squash merge is on `main` and CI is green.
 | E1 | Evaluation corpus schema, fixture tooling, initial cases | S1 | merged | #8 | #12 |
 | D1 | Public federal opinion connector and immutable snapshots | S1 | merged | #10 | #12 |
 | R1 | Authority identity, citation normalization, version resolution | D1 | merged | #13 | #14 |
-| X1 | Search index and hybrid retrieval | R1 | in_progress | #16 | |
+| X1 | Search index and hybrid retrieval | R1 | merged | #16 | #19 |
 | V1 | Passage, quotation, pinpoint, and proposition verification | R1, E1 | merged | #15 | #18 |
 | G2 | In-memory graph, JSON/JSONL, validation and traversals | G1 | merged | #7 | #11 |
 | G3 | Neo4j adapter and conformance suite | G2 | in_progress | #17 | |
