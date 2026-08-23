@@ -1,0 +1,41 @@
+# These files and directories are gitignored.
+.context/
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets.json
+
+# Node
+node_modules/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+.pnpm-store/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.eggs/
+src/*.egg-info/
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+*.log
+.turbo/
+
+# Test / type output
+.mypy_cache/
+htmlcov/
