@@ -22,9 +22,9 @@ Do not mark a node `merged` until the squash merge is on `main` and CI is green.
 | P1 | Failure attribution and research replay | W1, E1 | merged | #25 | #26 |
 | A1 | Auth, tenant/matter RBAC, audit and approval policies | S1 | merged | #9 | #12 |
 | U1 | Reviewer evidence, conflicts, and redline dashboard | W1, M1, A1 | merged | #27 | #28 |
-| O1 | OpenTelemetry, SLO baseline, alerts, runbooks | W1, M1 | in_progress | #29 | |
+| O1 | OpenTelemetry, SLO baseline, alerts, runbooks | W1, M1 | merged | #29 | #30 |
 | I1 | Provenance Guard monitor adapter | V1, stable external release | blocked | | |
-| Q1 | Full benchmark and baseline report | E1, V1, M1, P1 | blocked | | |
+| Q1 | Full benchmark and baseline report | E1, V1, M1, P1 | in_progress | #31 | |
 | Z1 | Threat, claims, correctness, legal-data, and DevEx reviews | required nodes | blocked | | |
 | Z2 | Clean clone, deployment rehearsal, release candidate | Z1 | blocked | | |
 

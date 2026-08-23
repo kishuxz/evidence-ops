@@ -27,7 +27,7 @@ function snap(id: string, text: string) {
   };
 }
 
-function makeCase(
+export function makeCase(
   id: string,
   category: CaseCategory,
   fields: {
@@ -51,6 +51,11 @@ function makeCase(
     snapshot: snap(id, fields.text),
     annotation: { ...REVIEWER, rationale: fields.rationale },
     privileged: false,
+    origin: "synthetic",
+    sourceKind: "constructed",
+    authorship: "single_author",
+    reviewStatus: "engineering_fixture_awaiting_expert_review",
+    independentReview: false,
   };
 }
 

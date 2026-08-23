@@ -9,4 +9,5 @@ export {
   type CorpusManifest,
   type EvalCase,
 } from "./schema.js";
-export { INITIAL_CASES, initialManifest } from "./fixtures.js";
+export { INITIAL_CASES, initialManifest, makeCase } from "./fixtures.js";
+export { CORPUS, corpusManifest, expandToTarget } from "./generate.js";

@@ -53,6 +53,11 @@ export type EvalCase = {
   snapshot: EvalSnapshot;
   annotation: EvalAnnotation;
   privileged: false;
+  origin: "synthetic";
+  sourceKind: "constructed";
+  authorship: "single_author";
+  reviewStatus: "engineering_fixture_awaiting_expert_review";
+  independentReview: false;
 };
 
 export type CorpusManifest = {
@@ -127,6 +132,21 @@ export function validateEvalCase(value: unknown): EvalCase {
   }
   if (!isRecord(value.citation)) {
     throw new Error("citation required");
+  }
+  if (value.origin !== "synthetic") {
+    throw new Error("origin must be synthetic until expert-authored public cases exist");
+  }
+  if (value.sourceKind !== "constructed") {
+    throw new Error("sourceKind must be constructed until public-source cases exist");
+  }
+  if (value.authorship !== "single_author") {
+    throw new Error("authorship must be single_author until independently authored cases exist");
+  }
+  if (value.reviewStatus !== "engineering_fixture_awaiting_expert_review") {
+    throw new Error("do not label cases expert-reviewed without an identifiable legal reviewer");
+  }
+  if (value.independentReview !== false) {
+    throw new Error("independentReview must be false until a second reviewer is recorded");
   }
   return value as EvalCase;
 }

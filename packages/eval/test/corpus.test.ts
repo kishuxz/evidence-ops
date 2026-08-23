@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { INITIAL_CASES, initialManifest } from "../src/fixtures.js";
+import { CORPUS, corpusManifest } from "../src/generate.js";
 import {
   CASE_CATEGORIES,
   CATEGORY_VERDICT,
@@ -25,6 +26,22 @@ describe("evaluation corpus", () => {
     const targetTotal = Object.values(manifest.targetCounts).reduce((sum, n) => sum + n, 0);
     expect(actualTotal).toBe(INITIAL_CASES.length);
     expect(actualTotal).toBeLessThan(targetTotal);
+  });
+
+  it("expands to the 200-case target as synthetic engineering fixtures awaiting expert review", () => {
+    const manifest = corpusManifest();
+    expect(CORPUS).toHaveLength(200);
+    expect(manifest.actualCounts).toEqual(manifest.targetCounts);
+    expect(manifest.notes.toLowerCase()).toContain("not expert-reviewed");
+    expect(manifest.notes.toLowerCase()).toContain("not independently reviewed");
+    for (const item of CORPUS) {
+      expect(item.origin).toBe("synthetic");
+      expect(item.sourceKind).toBe("constructed");
+      expect(item.authorship).toBe("single_author");
+      expect(item.reviewStatus).toBe("engineering_fixture_awaiting_expert_review");
+      expect(item.independentReview).toBe(false);
+      expect(validateEvalCase(item).id).toBe(item.id);
+    }
   });
 
   it("rejects privileged fixtures and mismatched hashes", () => {
