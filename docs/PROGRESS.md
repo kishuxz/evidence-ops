@@ -29,7 +29,7 @@ Do not mark a node `merged` until the squash merge is on `main` and CI is green.
 | C1 | Packaged evidenceops CLI | W1, V1, X1, M1, U1, A1 | merged | #35 | #40 |
 | D2 | Local private fixture-only demo | C1, A1, W1, M1, U1, O1 | merged | #36 | #41 |
 | E2 | Expert-reviewer package for synthetic corpus | E1, Q1 | merged | #37 | #42 |
-| Q2 | Robustness evaluations | Q1, V1 | in_progress | #38 | |
+| Q2 | Robustness evaluations | Q1, V1 | merged | #38 | #43 |
 | Z2 | Clean clone, deployment rehearsal, release candidate | Z1 | blocked | | |
 
 ## Open escalations

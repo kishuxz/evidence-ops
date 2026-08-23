@@ -27,7 +27,7 @@ GitHub release, or deploy a publicly accessible hosted demo.
 | C1 | #35 | #40 | Locally packaged CLI (not published) |
 | D2 | #36 | #41 | 127.0.0.1 fixture-only demo |
 | E2 | #37 | #42 | Reviewer package (no expert-review claim) |
-| Q2 | #38 | (this PR) | Robustness evaluations |
+| Q2 | #38 | #43 | Robustness evaluations |
 
 I1 remains **blocked** (#39). Z2 remains **blocked**.
 
