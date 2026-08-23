@@ -52,10 +52,10 @@ describe("execution graph and progress tracker", () => {
     }
   });
 
-  it("records F0 as in progress against issue 1", () => {
+  it("records F0 as merged against issue 1 and keeps a current in_progress node", () => {
     const progress = readFileSync(repoPath("docs/PROGRESS.md"), "utf8");
-    expect(progress).toMatch(/\|\s*F0\s*\|/);
-    expect(progress).toMatch(/in_progress/);
+    expect(progress).toMatch(/\|\s*F0\s*\|.+\|\s*merged\s*\|/);
     expect(progress).toContain("#1");
+    expect(progress).toMatch(/in_progress/);
   });
 });

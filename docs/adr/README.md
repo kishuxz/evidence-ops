@@ -20,3 +20,4 @@ Record durable choices that later nodes must not silently reverse.
 | 0002 | Modular monolith plus workers | Accepted with F0 |
 | 0003 | Node 20, Python 3.12+, pnpm, pytest, vitest | Accepted with F0 |
 | 0004 | Software license requires human decision | Escalated |
+| 0005 | Canonical JSON and deterministic stable IDs | Accepted with S1 |
