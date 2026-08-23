@@ -52,10 +52,10 @@ describe("execution graph and progress tracker", () => {
     }
   });
 
-  it("records F0 as merged against issue 1 and keeps a current in_progress node", () => {
+  it("records F0 as merged and allows the Z2 stop line after Z1", () => {
     const progress = readFileSync(repoPath("docs/PROGRESS.md"), "utf8");
     expect(progress).toMatch(/\|\s*F0\s*\|.+\|\s*merged\s*\|/);
     expect(progress).toContain("#1");
-    expect(progress).toMatch(/in_progress/);
+    expect(progress).toMatch(/in_progress|\|\s*Z2\s*\|.+\|\s*blocked\s*\|/);
   });
 });

@@ -43,8 +43,8 @@ Confusion (expected → predicted counts):
 - correct: 120
 - unresolved: 0
 - unresolvedCountedAsCorrect: false
-- p50Ms: 0.863
-- p95Ms: 1.041
+- p50Ms: 0.813
+- p95Ms: 0.944
 - costUsd (fixture units): 0.2
 - provenanceGuard: unavailable
 
@@ -77,8 +77,8 @@ Confusion (expected → predicted counts):
 - correct: 105
 - unresolved: 0
 - unresolvedCountedAsCorrect: false
-- p50Ms: 0.942
-- p95Ms: 1.145
+- p50Ms: 0.910
+- p95Ms: 1.023
 - costUsd (fixture units): 0.2
 - provenanceGuard: unavailable
 

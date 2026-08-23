@@ -37,4 +37,5 @@ Record durable choices that later nodes must not silently reverse.
 | 0019 | Failure attribution and research replay | Accepted with P1 |
 | 0020 | Reviewer evidence view | Accepted with U1 |
 | 0021 | Telemetry baseline without invented SLOs | Accepted with O1 |
-| 0022 | Synthetic 200-case corpus and offline baselines | Proposed with Q1 |
+| 0022 | Synthetic 200-case corpus and offline baselines | Accepted with Q1 |
+| 0023 | Stop before Z2 after independent Z1 reviews | Proposed with Z1 |
