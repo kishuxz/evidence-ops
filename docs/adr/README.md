@@ -28,3 +28,4 @@ Record durable choices that later nodes must not silently reverse.
 | 0010 | Initial evaluation corpus is synthetic and incomplete | Accepted with E1 |
 | 0011 | In-process auth, RBAC, audit, and approval policy | Accepted with A1 |
 | 0012 | Source-neutral fixture connector (no live CourtListener) | Accepted with D1 |
+| 0013 | Fixture-backed citation identity | Accepted with R1 |

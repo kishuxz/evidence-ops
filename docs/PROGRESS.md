@@ -10,9 +10,9 @@ Do not mark a node `merged` until the squash merge is on `main` and CI is green.
 | F0 | Repository foundation, tooling, CI, ADR template, progress tracking | — | merged | #1 | #2 |
 | S1 | Core domain schemas and stable IDs | F0 | merged | #3 | #4 |
 | G1 | Evidence graph model and invariants | S1 | merged | #5 | #6 |
-| E1 | Evaluation corpus schema, fixture tooling, initial cases | S1 | in_progress | #8 | |
-| D1 | Public federal opinion connector and immutable snapshots | S1 | in_progress | #10 | |
-| R1 | Authority identity, citation normalization, version resolution | D1 | blocked | | |
+| E1 | Evaluation corpus schema, fixture tooling, initial cases | S1 | merged | #8 | #12 |
+| D1 | Public federal opinion connector and immutable snapshots | S1 | merged | #10 | #12 |
+| R1 | Authority identity, citation normalization, version resolution | D1 | in_progress | #13 | |
 | X1 | Search index and hybrid retrieval | R1 | blocked | | |
 | V1 | Passage, quotation, pinpoint, and proposition verification | R1, E1 | blocked | | |
 | G2 | In-memory graph, JSON/JSONL, validation and traversals | G1 | merged | #7 | #11 |
@@ -20,7 +20,7 @@ Do not mark a node `merged` until the squash merge is on `main` and CI is green.
 | W1 | Durable research/checkpoint/retry/budget workflow | X1, V1, G2 | blocked | | |
 | M1 | Authority monitoring, diff, and impact traversal | W1 | blocked | | |
 | P1 | Failure attribution and research replay | W1, E1 | blocked | | |
-| A1 | Auth, tenant/matter RBAC, audit and approval policies | S1 | in_progress | #9 | |
+| A1 | Auth, tenant/matter RBAC, audit and approval policies | S1 | merged | #9 | #12 |
 | U1 | Reviewer evidence, conflicts, and redline dashboard | W1, M1, A1 | blocked | | |
 | O1 | OpenTelemetry, SLO baseline, alerts, runbooks | W1, M1 | blocked | | |
 | I1 | Provenance Guard monitor adapter | V1, stable external release | blocked | | |

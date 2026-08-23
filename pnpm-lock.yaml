@@ -20,6 +20,25 @@ importers:
         specifier: ^3.2.4
         version: 3.2.7(@types/node@20.19.43)
 
+  packages/authority:
+    dependencies:
+      '@evidenceops/connector':
+        specifier: workspace:*
+        version: link:../connector
+      '@evidenceops/contracts':
+        specifier: workspace:*
+        version: link:../contracts
+    devDependencies:
+      '@types/node':
+        specifier: ^20.19.0
+        version: 20.19.43
+      typescript:
+        specifier: ^5.9.2
+        version: 5.9.3
+      vitest:
+        specifier: ^3.2.4
+        version: 3.2.7(@types/node@20.19.43)
+
   packages/connector:
     dependencies:
       '@evidenceops/contracts':
