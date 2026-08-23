@@ -40,4 +40,5 @@ Record durable choices that later nodes must not silently reverse.
 | 0022 | Synthetic 200-case corpus and offline baselines | Accepted with Q1 |
 | 0023 | Stop before Z2 after independent Z1 reviews | Accepted with Z1 |
 | 0024 | Packaged local CLI, not a published package | Accepted with C1 |
-| 0025 | Local private fixture-only demo, not a public host | Proposed with D2 |
+| 0025 | Local private fixture-only demo, not a public host | Accepted with D2 |
+| 0026 | Expert-reviewer package does not complete expert review | Proposed with E2 |
