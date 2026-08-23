@@ -26,8 +26,8 @@ Do not mark a node `merged` until the squash merge is on `main` and CI is green.
 | I1 | Provenance Guard monitor adapter | V1, stable external release | blocked | #39 | |
 | Q1 | Full benchmark and baseline report | E1, V1, M1, P1 | merged | #31 | #32 |
 | Z1 | Threat, claims, correctness, legal-data, and DevEx reviews | required nodes | merged | #33 | #34 |
-| C1 | Packaged evidenceops CLI | W1, V1, X1, M1, U1, A1 | in_progress | #35 | |
-| D2 | Local private fixture-only demo | C1, A1, W1, M1, U1, O1 | not_started | #36 | |
+| C1 | Packaged evidenceops CLI | W1, V1, X1, M1, U1, A1 | merged | #35 | #40 |
+| D2 | Local private fixture-only demo | C1, A1, W1, M1, U1, O1 | in_progress | #36 | |
 | E2 | Expert-reviewer package for synthetic corpus | E1, Q1 | not_started | #37 | |
 | Q2 | Robustness evaluations | Q1, V1 | not_started | #38 | |
 | Z2 | Clean clone, deployment rehearsal, release candidate | Z1 | blocked | | |

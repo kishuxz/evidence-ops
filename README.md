@@ -89,5 +89,7 @@ evidenceops graph validate --tenant T --matter M --token TOKEN --file graph.json
 - `docs/Z1_REVIEW.md`
 - `docs/RELEASE_CANDIDATE.md`
 - `docs/CLI.md`
+- `docs/DEMO.md`
+- `docs/FOUNDER_DEMO.md`
 - `docs/PROGRESS.md`
 - `docs/adr/`

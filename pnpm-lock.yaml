@@ -134,6 +134,36 @@ importers:
         specifier: ^3.2.4
         version: 3.2.7(@types/node@20.19.43)
 
+  packages/demo:
+    devDependencies:
+      '@evidenceops/auth':
+        specifier: workspace:*
+        version: link:../auth
+      '@evidenceops/cli':
+        specifier: workspace:*
+        version: link:../cli
+      '@evidenceops/graph':
+        specifier: workspace:*
+        version: link:../graph
+      '@evidenceops/monitor':
+        specifier: workspace:*
+        version: link:../monitor
+      '@evidenceops/obs':
+        specifier: workspace:*
+        version: link:../obs
+      '@types/node':
+        specifier: ^20.19.0
+        version: 20.19.43
+      esbuild:
+        specifier: ^0.25.9
+        version: 0.25.12
+      typescript:
+        specifier: ^5.9.2
+        version: 5.9.3
+      vitest:
+        specifier: ^3.2.4
+        version: 3.2.7(@types/node@20.19.43)
+
   packages/eval:
     dependencies:
       '@evidenceops/contracts':
