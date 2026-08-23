@@ -29,3 +29,4 @@ Record durable choices that later nodes must not silently reverse.
 | 0011 | In-process auth, RBAC, audit, and approval policy | Accepted with A1 |
 | 0012 | Source-neutral fixture connector (no live CourtListener) | Accepted with D1 |
 | 0013 | Fixture-backed citation identity | Accepted with R1 |
+| 0014 | Deterministic proposition verification | Proposed with V1 |
