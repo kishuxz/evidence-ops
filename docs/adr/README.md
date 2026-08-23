@@ -35,4 +35,5 @@ Record durable choices that later nodes must not silently reverse.
 | 0017 | Durable offline research workflow | Accepted with W1 |
 | 0018 | Authority-version monitoring and redlines | Accepted with M1 |
 | 0019 | Failure attribution and research replay | Accepted with P1 |
-| 0020 | Reviewer evidence view | Proposed with U1 |
+| 0020 | Reviewer evidence view | Accepted with U1 |
+| 0021 | Telemetry baseline without invented SLOs | Proposed with O1 |
