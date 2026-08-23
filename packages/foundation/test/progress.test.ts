@@ -23,6 +23,10 @@ const EXPECTED_IDS = [
   "I1",
   "Q1",
   "Z1",
+  "C1",
+  "D2",
+  "E2",
+  "Q2",
   "Z2",
 ] as const;
 

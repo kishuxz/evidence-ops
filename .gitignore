@@ -14,6 +14,7 @@ secrets.json
 node_modules/
 dist/
 build/
+packages/cli/schemas/
 coverage/
 *.tsbuildinfo
 .pnpm-store/
@@ -34,7 +35,7 @@ src/*.egg-info/
 .idea/
 .vscode/
 *.log
-.turbo/
+*.tgz
 
 # Test / type output
 .mypy_cache/

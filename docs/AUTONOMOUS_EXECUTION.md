@@ -29,6 +29,10 @@ green CI -> squash merge -> refresh main -> repeat`.
 | I1 | Provenance Guard monitor adapter | V1, stable external release | single writer |
 | Q1 | Full benchmark and baseline report | E1, V1, M1, P1 | evaluation lane |
 | Z1 | Threat, claims, correctness, legal-data, and DevEx reviews | required nodes | read-only lanes |
+| C1 | Packaged evidenceops CLI | W1, V1, X1, M1, U1, A1 | isolated lane |
+| D2 | Local private fixture-only demo | C1, A1, W1, M1, U1, O1 | isolated lane |
+| E2 | Expert-reviewer package for synthetic corpus | E1, Q1 | evaluation lane |
+| Q2 | Robustness evaluations | Q1, V1 | evaluation lane |
 | Z2 | Clean clone, deployment rehearsal, release candidate | Z1 | single writer |
 
 Only implementation nodes with merged dependencies may start. Fixture expansion, source

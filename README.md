@@ -36,9 +36,10 @@ External papers motivate the benchmark; they are not EvidenceOps performance cla
 
 ## Repository status
 
-Implementation nodes F0–Q1 are merged. Z1 reviews are in this release candidate.
-I1 (Provenance Guard) and live CourtListener remain blocked. **Z2 public release,
-package publish, and public hosted demo are not authorized.**
+Implementation nodes F0–Z1 are merged. C1 packages a local `evidenceops` CLI;
+it is **not** published to npm. I1 (Provenance Guard) and live CourtListener remain
+blocked. **Z2 public release, package publish, and public hosted demo are not
+authorized.**
 
 Licensed under Apache License 2.0. See `LICENSE` and `docs/LICENSE_STATUS.md`.
 The networked CourtListener adapter is blocked; see ADR 0008.
@@ -56,24 +57,23 @@ bash scripts/verify.sh
 
 This is the same gate CI runs. Do not merge a change that fails it.
 
-## Intended commands
+## CLI
 
-The following are specified product verbs, **not a shipped CLI binary** in this
-release candidate:
+A locally packaged `evidenceops` binary lives in `@evidenceops/cli`. That package
+is private and **is not published** to the npm registry. Packing a tarball from
+this repository is not a Z2 release. See `docs/CLI.md`.
 
 ```bash
-evidenceops matter create
-evidenceops research run
-evidenceops citation verify
-evidenceops graph validate
-evidenceops authority monitor
-evidenceops impact explain
-evidenceops replay
-evidenceops eval run
+pnpm --filter @evidenceops/cli build
+evidenceops ingest --tenant T --matter M --token TOKEN --ids fixture.widget.v1
+evidenceops retrieve --tenant T --matter M --token TOKEN --text "..."
+evidenceops verify --tenant T --matter M --token TOKEN --proposition "..." --quotation "..." --pinpoint "..." --citation "..."
+evidenceops trace --tenant T --matter M --token TOKEN --start-id NODE
+evidenceops impact --tenant T --matter M --token TOKEN --version-id VERSION
+evidenceops review --tenant T --matter M --token TOKEN --proposition-id ID
+evidenceops evaluate --tenant T --matter M --token TOKEN
+evidenceops graph validate --tenant T --matter M --token TOKEN --file graph.json
 ```
-
-Use the TypeScript packages and `bash scripts/verify.sh` until a CLI package is
-explicitly released under Z2 authorization.
 
 ## Documentation
 
@@ -88,5 +88,6 @@ explicitly released under Z2 authorization.
 - `docs/LIMITATIONS.md`
 - `docs/Z1_REVIEW.md`
 - `docs/RELEASE_CANDIDATE.md`
+- `docs/CLI.md`
 - `docs/PROGRESS.md`
 - `docs/adr/`
