@@ -24,6 +24,8 @@ const REQUIRED_DOCS = [
   "docs/adr/0008-courtlistener-blocked.md",
   "docs/EVALUATION_CORPUS.md",
   "docs/CONNECTORS.md",
+  "docs/Z1_REVIEW.md",
+  "docs/RELEASE_CANDIDATE.md",
   "LICENSE",
 ] as const;
 
@@ -44,6 +46,8 @@ describe("required documentation", () => {
       "docs/CONDUCTOR_LAUNCH.md",
       "docs/EVALUATION_CORPUS.md",
       "docs/CONNECTORS.md",
+      "docs/Z1_REVIEW.md",
+      "docs/RELEASE_CANDIDATE.md",
     ]) {
       expect(readme).toContain(relative);
     }

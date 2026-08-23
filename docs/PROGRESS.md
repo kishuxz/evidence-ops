@@ -24,8 +24,8 @@ Do not mark a node `merged` until the squash merge is on `main` and CI is green.
 | U1 | Reviewer evidence, conflicts, and redline dashboard | W1, M1, A1 | merged | #27 | #28 |
 | O1 | OpenTelemetry, SLO baseline, alerts, runbooks | W1, M1 | merged | #29 | #30 |
 | I1 | Provenance Guard monitor adapter | V1, stable external release | blocked | | |
-| Q1 | Full benchmark and baseline report | E1, V1, M1, P1 | in_progress | #31 | |
-| Z1 | Threat, claims, correctness, legal-data, and DevEx reviews | required nodes | blocked | | |
+| Q1 | Full benchmark and baseline report | E1, V1, M1, P1 | merged | #31 | #32 |
+| Z1 | Threat, claims, correctness, legal-data, and DevEx reviews | required nodes | merged | #33 | #34 |
 | Z2 | Clean clone, deployment rehearsal, release candidate | Z1 | blocked | | |
 
 ## Open escalations

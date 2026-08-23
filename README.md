@@ -36,10 +36,14 @@ External papers motivate the benchmark; they are not EvidenceOps performance cla
 
 ## Repository status
 
-Foundation work F0–G2 is merged. See `docs/PROGRESS.md`. v0.1 is not complete.
+Implementation nodes F0–Q1 are merged. Z1 reviews are in this release candidate.
+I1 (Provenance Guard) and live CourtListener remain blocked. **Z2 public release,
+package publish, and public hosted demo are not authorized.**
 
 Licensed under Apache License 2.0. See `LICENSE` and `docs/LICENSE_STATUS.md`.
 The networked CourtListener adapter is blocked; see ADR 0008.
+
+See `docs/PROGRESS.md` and `docs/RELEASE_CANDIDATE.md`.
 
 ## Verification
 
@@ -54,6 +58,9 @@ This is the same gate CI runs. Do not merge a change that fails it.
 
 ## Intended commands
 
+The following are specified product verbs, **not a shipped CLI binary** in this
+release candidate:
+
 ```bash
 evidenceops matter create
 evidenceops research run
@@ -65,7 +72,8 @@ evidenceops replay
 evidenceops eval run
 ```
 
-Commands are required product behavior, not an assertion that they already exist.
+Use the TypeScript packages and `bash scripts/verify.sh` until a CLI package is
+explicitly released under Z2 authorization.
 
 ## Documentation
 
@@ -78,5 +86,7 @@ Commands are required product behavior, not an assertion that they already exist
 - `docs/EVALUATION_CORPUS.md`
 - `docs/CONNECTORS.md`
 - `docs/LIMITATIONS.md`
+- `docs/Z1_REVIEW.md`
+- `docs/RELEASE_CANDIDATE.md`
 - `docs/PROGRESS.md`
 - `docs/adr/`

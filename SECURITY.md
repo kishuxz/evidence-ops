@@ -12,11 +12,12 @@ maintainers privately.
 
 ## Current scope
 
-F0 contains no production service, no secret store, and no private legal data. Still:
+There is no publicly deployed production service and no secret store in git.
+Still:
 
 - never commit `.env`, API tokens, or CourtListener credentials
-- never log secrets
+- never log secrets in O1 fields
 - never add privileged or client-confidential fixtures
 
-Threat modeling for private-data ingestion is required before that ingestion (see
-`docs/ARCHITECTURE.md`). Z1 tracks unresolved critical/high findings.
+Z1 found no critical tenant-isolation bypass. Unresolved items are I1, live
+CourtListener, expert corpus review, and Z2 public deploy authorization.

@@ -51,4 +51,14 @@ describe("claims and verdict contract", () => {
     expect(license).toContain("Version 2.0");
     expect(read("docs/adr/0008-courtlistener-blocked.md").toLowerCase()).toContain("blocked");
   });
+
+  it("stops before Z2 and does not claim Provenance Guard or expert-reviewed cases", () => {
+    const rc = read("docs/RELEASE_CANDIDATE.md").toLowerCase();
+    expect(rc).toContain("stop before z2");
+    expect(rc).toContain("authorization to publish packages");
+    expect(rc).toContain("i1");
+    expect(rc).toContain("engineering_fixture_awaiting_expert_review");
+    expect(read("docs/EVALUATION_CORPUS.md").toLowerCase()).toContain("not");
+    expect(read("docs/EVALUATION_CORPUS.md").toLowerCase()).toContain("expert-reviewed");
+  });
 });
