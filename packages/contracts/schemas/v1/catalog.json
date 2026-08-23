@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "schemaId": "evidenceops.contracts.v1",
+  "verdicts": [
+    "FULL_SUPPORT",
+    "PARTIAL_SUPPORT",
+    "NO_SUPPORT",
+    "CONTRADICTED",
+    "WRONG_JURISDICTION",
+    "STALE_AUTHORITY",
+    "UNRESOLVED"
+  ],
+  "reviewerStates": [
+    "pending",
+    "accepted",
+    "rejected",
+    "edited",
+    "more_research_requested"
+  ],
+  "redactionClassifications": [
+    "public",
+    "internal",
+    "confidential",
+    "privileged"
+  ],
+  "dataAvailability": [
+    "available",
+    "missing_connector_data",
+    "unavailable_treatment",
+    "deleted_source"
+  ],
+  "verdictMethods": ["deterministic", "model", "hybrid", "human"],
+  "impactKinds": ["direct", "transitive"],
+  "reasonCodes": [
+    "authority_identity_verified",
+    "authority_identity_failed",
+    "quotation_exact",
+    "quotation_mismatch",
+    "pinpoint_verified",
+    "pinpoint_failed",
+    "proposition_full_support",
+    "proposition_partial_support",
+    "proposition_no_support",
+    "proposition_contradicted",
+    "wrong_jurisdiction",
+    "stale_authority",
+    "wrong_document",
+    "fabricated_authority",
+    "missing_connector_data",
+    "unavailable_treatment",
+    "unresolved_insufficient_evidence"
+  ],
+  "nodeTypes": [
+    {
+      "name": "Tenant",
+      "prefix": "ten",
+      "scope": "none",
+      "naturalKey": ["slug"]
+    },
+    {
+      "name": "User",
+      "prefix": "usr",
+      "scope": "tenant",
+      "naturalKey": ["tenantId", "subject"]
+    },
+    {
+      "name": "Matter",
+      "prefix": "mat",
+      "scope": "tenant",
+      "naturalKey": ["tenantId", "slug"]
+    },
+    {
+      "name": "ResearchQuestion",
+      "prefix": "rq",
+      "scope": "tenant_matter",
+      "naturalKey": ["matterId", "slug"]
+    },
+    {
+      "name": "ClientFact",
+      "prefix": "cf",
+      "scope": "tenant_matter",
+      "naturalKey": ["matterId", "slug"]
+    },
+    {
+      "name": "Issue",
+      "prefix": "iss",
+      "scope": "tenant_matter",
+      "naturalKey": ["matterId", "slug"]
+    },
+    {
+      "name": "Jurisdiction",
+      "prefix": "jur",
+      "scope": "none",
+      "naturalKey": ["code"]
+    },
+    {
+      "name": "LegalProposition",
+      "prefix": "prp",
+      "scope": "tenant_matter",
+      "naturalKey": ["matterId", "slug"]
+    },
+    {
+      "name": "Authority",
+      "prefix": "ath",
+      "scope": "none",
+      "naturalKey": ["jurisdictionCode", "citationKey"]
+    },
+    {
+      "name": "AuthorityVersion",
+      "prefix": "av",
+      "scope": "none",
+      "naturalKey": ["authorityId", "versionLocator"]
+    },
+    {
+      "name": "Court",
+      "prefix": "crt",
+      "scope": "none",
+      "naturalKey": ["code"]
+    },
+    {
+      "name": "Opinion",
+      "prefix": "opn",
+      "scope": "none",
+      "naturalKey": ["authorityVersionId", "opinionKind"]
+    },
+    {
+      "name": "Passage",
+      "prefix": "psg",
+      "scope": "none",
+      "naturalKey": ["authorityVersionId", "locator", "contentHash"]
+    },
+    {
+      "name": "Citation",
+      "prefix": "cit",
+      "scope": "tenant_matter",
+      "naturalKey": ["matterId", "rawText"]
+    },
+    {
+      "name": "Retrieval",
+      "prefix": "ret",
+      "scope": "tenant_matter",
+      "naturalKey": ["researchRunId", "documentId", "queryHash"]
+    },
+    {
+      "name": "ResearchRun",
+      "prefix": "run",
+      "scope": "tenant_matter",
+      "naturalKey": ["matterId", "idempotencyKey"]
+    },
+    {
+      "name": "Conclusion",
+      "prefix": "con",
+      "scope": "tenant_matter",
+      "naturalKey": ["matterId", "slug"]
+    },
+    {
+      "name": "Memo",
+      "prefix": "mem",
+      "scope": "tenant_matter",
+      "naturalKey": ["matterId", "slug"]
+    },
+    {
+      "name": "Verdict",
+      "prefix": "vrd",
+      "scope": "tenant_matter",
+      "naturalKey": ["researchRunId", "propositionId", "sequence"]
+    },
+    {
+      "name": "Policy",
+      "prefix": "pol",
+      "scope": "tenant",
+      "naturalKey": ["tenantId", "slug", "version"]
+    },
+    {
+      "name": "ReviewerDecision",
+      "prefix": "rev",
+      "scope": "tenant_matter",
+      "naturalKey": ["memoId", "reviewerUserId", "sequence"]
+    },
+    {
+      "name": "ChangeEvent",
+      "prefix": "chg",
+      "scope": "none",
+      "naturalKey": ["authorityVersionId", "eventKind", "occurredAt"]
+    },
+    {
+      "name": "Action",
+      "prefix": "act",
+      "scope": "tenant_matter",
+      "naturalKey": ["matterId", "idempotencyKey"]
+    }
+  ],
+  "edgeTypes": [
+    "RAISES",
+    "GOVERNS",
+    "ASSERTS",
+    "CITES",
+    "QUOTES",
+    "SUPPORTS",
+    "PARTIALLY_SUPPORTS",
+    "CONTRADICTS",
+    "INTERPRETS",
+    "AMENDS",
+    "SUPERSEDES",
+    "REVERSES",
+    "LIMITS",
+    "DISTINGUISHES",
+    "EFFECTIVE_IN",
+    "DERIVED_FROM",
+    "DEPENDS_ON",
+    "EVALUATED_BY",
+    "DECIDES",
+    "INVALIDATES",
+    "REVIEWED_BY",
+    "REPLAYED_AS"
+  ]
+}

@@ -7,8 +7,8 @@ Do not mark a node `merged` until the squash merge is on `main` and CI is green.
 
 | ID | Work | Depends on | Status | Issue | PR |
 | --- | --- | --- | --- | --- | --- |
-| F0 | Repository foundation, tooling, CI, ADR template, progress tracking | — | in_progress | #1 | |
-| S1 | Core domain schemas and stable IDs | F0 | blocked | | |
+| F0 | Repository foundation, tooling, CI, ADR template, progress tracking | — | merged | #1 | #2 |
+| S1 | Core domain schemas and stable IDs | F0 | in_progress | #3 | |
 | G1 | Evidence graph model and invariants | S1 | blocked | | |
 | E1 | Evaluation corpus schema, fixture tooling, initial cases | S1 | blocked | | |
 | D1 | Public federal opinion connector and immutable snapshots | S1 | blocked | | |

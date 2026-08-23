@@ -9,8 +9,8 @@
     "pnpm": ">=10"
   },
   "scripts": {
-    "test": "pnpm --filter @evidenceops/foundation test",
-    "typecheck": "pnpm --filter @evidenceops/foundation typecheck",
+    "test": "pnpm --filter \"./packages/**\" test",
+    "typecheck": "pnpm --filter \"./packages/**\" typecheck",
     "verify": "bash scripts/verify.sh"
   },
   "pnpm": {
