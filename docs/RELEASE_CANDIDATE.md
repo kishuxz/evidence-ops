@@ -24,15 +24,25 @@ GitHub release, or deploy a publicly accessible hosted demo.
 | O1 | #29 | #30 | Telemetry baseline / runbooks |
 | Q1 | #31 | #32 | 200-case corpus / offline baselines |
 | Z1 | #33 | #34 | Security, claims, legal-data, DevEx reviews |
+| C1 | #35 | #40 | Locally packaged CLI (not published) |
+| D2 | #36 | #41 | 127.0.0.1 fixture-only demo |
+| E2 | #37 | #42 | Reviewer package (no expert-review claim) |
+| Q2 | #38 | #43 | Robustness evaluations |
+
+I1 remains **blocked** (#39). Z2 remains **blocked**.
 
 ## Remaining blocked dependencies
 
-- **I1** — Provenance Guard has no stable versioned release. Do not copy internals.
-  If a versioned release appears, integrate a monitor-mode adapter first.
+- **I1** — Provenance Guard has no stable versioned release (#39). Do not copy internals.
+  Gate: remediation merged, independent reviewer approval, stable versioned package,
+  documented public APIs only, compatibility and failure tests. Until then comparisons
+  report `n/a`.
 - **Live CourtListener/RECAP** — ADR 0008. No live adapter, scrape, or credentials.
 - **Z2** — public release, npm/PyPI publish, public hosted demo.
-- **Expert legal review** of the 200-case corpus.
-- **Shipped CLI binary** — packages exist; `evidenceops` commands are not a released binary.
+- **Expert legal review** of the 200-case corpus. E2 provides a package; it does not
+  complete that review. `independentReview` remains `false`.
+- **Registry CLI** — `@evidenceops/cli` is packable from git (`pnpm pack`) and is **not**
+  published to npm.
 
 ## Exact clean-clone verification
 
@@ -42,13 +52,29 @@ On a machine with Node 20.x, Python ≥ 3.12, and pnpm 10.14.0:
 git clone https://github.com/kishuxz/evidence-ops.git
 cd evidence-ops
 bash scripts/verify.sh
+pnpm --filter @evidenceops/cli build
+pnpm --filter @evidenceops/cli pack --pack-destination /tmp
+mkdir /tmp/evidenceops-cli-consumer && cd /tmp/evidenceops-cli-consumer
+npm init -y
+npm install /tmp/evidenceops-cli-0.1.0.tgz
+npx evidenceops --help
 ```
 
-Core CI uses the same script and does **not** require Docker, Neo4j, network
-APIs, or credentials. `NEO4J_URI` unset ⇒ G3 live suite skipped (`unverified` in CI).
+Local private demo (not public):
+
+```bash
+bash scripts/demo.sh start
+bash scripts/demo.sh script
+bash scripts/demo.sh stop
+```
+
+Optional Neo4j live conformance: set `NEO4J_URI` per `docs/NEO4J.md`. Unset ⇒ skipped.
+
+Dependency audit (record, do not treat as a publish gate): `pnpm audit`.
+Q2 local run: `No known vulnerabilities found` (high and above; 2026-08-22).
 
 A shallow clone of `main` at Q1 (`2d6c3e2`) was executed as a pre-Z1 clean-clone
-check; results are recorded in the Z1 PR verification notes.
+check. Post-C1/D2/E2/Q2 verification is `bash scripts/verify.sh` on current `main`.
 
 ## Corpus composition and review status
 
@@ -84,6 +110,16 @@ I1 omitted):
 p50/p95 and fixture cost units are in the generated report. They are measurements,
 not SLOs. 200/200 EvidenceOps is **not** a claim of hallucination-free legal research.
 
+## Q2 robustness
+
+See `docs/Q2_ROBUSTNESS_REPORT.md`. Mutations include paraphrases, distractors,
+conflicts, wrong-document, stale, jurisdiction, partial snapshots, prompt-injection
+text, cross-tenant retrieval, citation-format controls, and abstention.
+
+UNRESOLVED is never counted correct. Isolation failures are counted separately.
+I1 is `n/a`. Do not describe Q1 200/200 as legal reliability, hallucination
+elimination, or production accuracy.
+
 ## Neo4j integration evidence
 
 - Adapter: `@evidenceops/graph-neo4j`, parameterized Cypher, tenant/matter on every
@@ -113,6 +149,8 @@ No critical tenant isolation, approval bypass, or secret-in-git finding.
 - U1 is an HTML evidence view, not a production web host.
 - O1 is in-process telemetry, not a vendor OpenTelemetry backend and not SLOs.
 - Corpus is synthetic and awaits qualified legal review.
+- CLI is locally packaged, not an npm release.
+- Demo binds 127.0.0.1 only and is not a public product.
 - No live federal-opinion connector.
 
 ## Proposed public demo architecture (not built, not authorized)
@@ -135,7 +173,7 @@ Do **not** deploy this without Z2 authorization.
 - [ ] Expert review of evaluation corpus, or honest “engineering fixtures” labeling kept
 - [ ] Written Free Law Project terms if live CourtListener is desired
 - [ ] I1 only after a stable Provenance Guard release (monitor-mode first)
-- [ ] CLI binary decision
+- [ ] CLI binary **publish** decision (local pack already exists; registry publish is Z2)
 - [ ] Clean-clone + deployment rehearsal on the authorized environment
 
 ## Exact actions requiring human approval

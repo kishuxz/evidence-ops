@@ -324,6 +324,28 @@ importers:
         specifier: ^3.2.4
         version: 3.2.7(@types/node@20.19.43)
 
+  packages/robustness:
+    dependencies:
+      '@evidenceops/eval':
+        specifier: workspace:*
+        version: link:../eval
+      '@evidenceops/retrieve':
+        specifier: workspace:*
+        version: link:../retrieve
+      '@evidenceops/verify':
+        specifier: workspace:*
+        version: link:../verify
+    devDependencies:
+      '@types/node':
+        specifier: ^20.19.0
+        version: 20.19.43
+      typescript:
+        specifier: ^5.9.2
+        version: 5.9.3
+      vitest:
+        specifier: ^3.2.4
+        version: 3.2.7(@types/node@20.19.43)
+
   packages/verify:
     dependencies:
       '@evidenceops/contracts':

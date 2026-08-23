@@ -36,10 +36,10 @@ External papers motivate the benchmark; they are not EvidenceOps performance cla
 
 ## Repository status
 
-Implementation nodes F0–Z1 are merged. C1 packages a local `evidenceops` CLI;
-it is **not** published to npm. I1 (Provenance Guard) and live CourtListener remain
-blocked. **Z2 public release, package publish, and public hosted demo are not
-authorized.**
+Implementation nodes F0–E2 are merged; Q2 robustness is in this release candidate.
+C1 is a locally packaged CLI, **not** published to npm. D2 is a 127.0.0.1 demo,
+**not** a public host. I1 and live CourtListener remain blocked. **Z2 public
+release, package publish, and public hosted demo are not authorized.**
 
 Licensed under Apache License 2.0. See `LICENSE` and `docs/LICENSE_STATUS.md`.
 The networked CourtListener adapter is blocked; see ADR 0008.
@@ -91,5 +91,6 @@ evidenceops graph validate --tenant T --matter M --token TOKEN --file graph.json
 - `docs/CLI.md`
 - `docs/DEMO.md`
 - `docs/FOUNDER_DEMO.md`
+- `docs/Q2_ROBUSTNESS_REPORT.md`
 - `docs/PROGRESS.md`
 - `docs/adr/`
