@@ -29,3 +29,10 @@ def test_catalog_has_seven_verdicts() -> None:
         "UNRESOLVED",
     ]
     assert "missing_connector_data" in catalog["dataAvailability"]
+
+
+def test_unresolved_is_not_memo_admissible() -> None:
+    from evidenceops.contracts import proposition_admissible_in_memo
+
+    assert proposition_admissible_in_memo("FULL_SUPPORT", "accepted") is True
+    assert proposition_admissible_in_memo("UNRESOLVED", "accepted") is False
