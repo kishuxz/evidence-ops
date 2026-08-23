@@ -5,11 +5,9 @@ narratives must not exceed it.
 
 ## Current product state
 
-F0 is repository foundation only. There is no research runtime, connector, retrieval
-index, evidence graph store, reviewer dashboard, or evaluation benchmark result on
-`main` until the corresponding work node merges.
-
-Absence of those capabilities is a limitation, not a passing evaluation.
+F0–G1 are merged: specs, contracts, and a graph validator exist. There is no live legal
+data connector. Offline fixtures are not CourtListener coverage. There is no hosted
+demo, evaluation benchmark report, or public release.
 
 ## Representation limits (always)
 
@@ -34,8 +32,9 @@ and current code may be cited as our results.
 
 ## Data and evaluation limits (v0.1 target)
 
-- First connector is one authorized public federal opinion source, not the universe of law.
-- Immutable snapshots record what was retrieved, not that the source is complete.
+- The networked CourtListener/RECAP adapter is blocked (ADR 0008). D1 is fixture-only.
+- Fixture snapshots are not live CourtListener coverage and must not be described as such.
+- Immutable snapshots record what was admitted, not that any source is complete.
 - Missing connector data and unavailable treatment data remain explicit unknowns.
 - The evaluation corpus must not contain privileged client material.
 - Core evaluation must run offline from versioned fixtures without Neo4j or network.

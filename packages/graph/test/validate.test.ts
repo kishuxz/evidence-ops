@@ -1,50 +1,10 @@
 import { stableId } from "@evidenceops/contracts";
 import { describe, expect, it } from "vitest";
 import { validateGraph } from "../src/validate.js";
-import { envelope, makeEdge, tenantId } from "./fixtures.js";
+import { sampleSupportingGraph, envelope, makeEdge, tenantId } from "./fixtures.js";
 
-function validAuthorityGraph() {
-  const tenant = tenantId();
-  const matter = stableId("Matter", { tenantId: tenant, slug: "m1" });
-  const authority = stableId("Authority", { jurisdictionCode: "US-FED", citationKey: "1 U.S. 1" });
-  const version = stableId("AuthorityVersion", { authorityId: authority, versionLocator: "v1" });
-  const passage = stableId("Passage", { authorityVersionId: version, locator: "p.1", contentHash: "b".repeat(64) });
-  const proposition = stableId("LegalProposition", { matterId: matter, slug: "p1" });
-  const run = stableId("ResearchRun", { matterId: matter, idempotencyKey: "run-1" });
-  const verdict = stableId("Verdict", { researchRunId: run, propositionId: proposition, sequence: 1 });
-  const memo = stableId("Memo", { matterId: matter, slug: "memo-1" });
-  return {
-    tenant,
-    matter,
-    authority,
-    version,
-    passage,
-    proposition,
-    verdict,
-    memo,
-    graph: {
-      schemaVersion: 1,
-      nodes: [
-        envelope("Tenant", tenant, { tenantId: tenant }),
-        envelope("Matter", matter, { tenantId: tenant, matterId: matter }),
-        envelope("Authority", authority, { attributes: { dataAvailability: "available" } }),
-        envelope("AuthorityVersion", version, { attributes: { authorityId: authority } }),
-        envelope("Passage", passage, { attributes: { authorityVersionId: version } }),
-        envelope("LegalProposition", proposition, { tenantId: tenant, matterId: matter }),
-        envelope("Verdict", verdict, {
-          tenantId: tenant,
-          matterId: matter,
-          attributes: { verdict: "FULL_SUPPORT", reviewerState: "accepted" },
-        }),
-        envelope("Memo", memo, { tenantId: tenant, matterId: matter, attributes: { status: "accepted" } }),
-      ],
-      edges: [
-        makeEdge("SUPPORTS", proposition, passage, { tenantId: tenant, matterId: matter }),
-        makeEdge("EVALUATED_BY", proposition, verdict, { tenantId: tenant, matterId: matter }),
-        makeEdge("ASSERTS", memo, proposition, { tenantId: tenant, matterId: matter }),
-      ],
-    },
-  };
+function validAuthorityGraph(slug = "acme") {
+  return sampleSupportingGraph(slug);
 }
 
 describe("validateGraph", () => {

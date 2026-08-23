@@ -19,6 +19,9 @@ Record durable choices that later nodes must not silently reverse.
 | 0001 | Record architecture decisions in `docs/adr` | Accepted with F0 |
 | 0002 | Modular monolith plus workers | Accepted with F0 |
 | 0003 | Node 20, Python 3.12+, pnpm, pytest, vitest | Accepted with F0 |
-| 0004 | Software license requires human decision | Escalated |
+| 0004 | Software license requires human decision | Superseded by 0007 |
 | 0005 | Canonical JSON and deterministic stable IDs | Accepted with S1 |
 | 0006 | Typed evidence graph document and invariant validator | Accepted with G1 |
+| 0007 | Apache License 2.0 | Accepted |
+| 0008 | CourtListener live adapter blocked; D1 fixture-only | Accepted |
+| 0009 | In-memory graph store, JSON/JSONL, adapter contract | Accepted with G2 |

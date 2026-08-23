@@ -43,10 +43,12 @@ describe("claims and verdict contract", () => {
     expect(limitations).toContain("graph path is provenance, not proof");
   });
 
-  it("does not grant a software license before a human decision", () => {
+  it("records Apache-2.0 after the human license decision", () => {
     const licenseStatus = read("docs/LICENSE_STATUS.md").toLowerCase();
-    expect(licenseStatus).toContain("human");
-    expect(licenseStatus).toContain("not selected");
-    expect(() => read("LICENSE")).toThrow();
+    expect(licenseStatus).toContain("apache license, version 2.0");
+    const license = read("LICENSE");
+    expect(license).toContain("Apache License");
+    expect(license).toContain("Version 2.0");
+    expect(read("docs/adr/0008-courtlistener-blocked.md").toLowerCase()).toContain("blocked");
   });
 });
