@@ -36,7 +36,7 @@ External papers motivate the benchmark; they are not EvidenceOps performance cla
 
 ## Repository status
 
-Foundation work F0–G1 is merged. See `docs/PROGRESS.md`. v0.1 is not complete.
+Foundation work F0–G2 is merged. See `docs/PROGRESS.md`. v0.1 is not complete.
 
 Licensed under Apache License 2.0. See `LICENSE` and `docs/LICENSE_STATUS.md`.
 The networked CourtListener adapter is blocked; see ADR 0008.
@@ -75,6 +75,8 @@ Commands are required product behavior, not an assertion that they already exist
 - `docs/EVALUATION_PLAN.md`
 - `docs/AUTONOMOUS_EXECUTION.md`
 - `docs/CONDUCTOR_LAUNCH.md`
+- `docs/EVALUATION_CORPUS.md`
+- `docs/CONNECTORS.md`
 - `docs/LIMITATIONS.md`
 - `docs/PROGRESS.md`
 - `docs/adr/`

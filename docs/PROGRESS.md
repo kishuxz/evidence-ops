@@ -15,8 +15,8 @@ Do not mark a node `merged` until the squash merge is on `main` and CI is green.
 | R1 | Authority identity, citation normalization, version resolution | D1 | blocked | | |
 | X1 | Search index and hybrid retrieval | R1 | blocked | | |
 | V1 | Passage, quotation, pinpoint, and proposition verification | R1, E1 | blocked | | |
-| G2 | In-memory graph, JSON/JSONL, validation and traversals | G1 | in_progress | #7 | |
-| G3 | Neo4j adapter and conformance suite | G2 | blocked | | |
+| G2 | In-memory graph, JSON/JSONL, validation and traversals | G1 | merged | #7 | #11 |
+| G3 | Neo4j adapter and conformance suite | G2 | not_started | | |
 | W1 | Durable research/checkpoint/retry/budget workflow | X1, V1, G2 | blocked | | |
 | M1 | Authority monitoring, diff, and impact traversal | W1 | blocked | | |
 | P1 | Failure attribution and research replay | W1, E1 | blocked | | |
