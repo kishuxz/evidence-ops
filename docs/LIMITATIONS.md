@@ -5,10 +5,10 @@ narratives must not exceed it.
 
 ## Current product state
 
-F0–Z1 are merged. A locally packaged `evidenceops` CLI exists in this repository; it is
-not an npm/PyPI release. There is no live legal data connector. Offline fixtures are not
-CourtListener coverage. There is no public hosted demo or public release. The 200-case
-corpus is synthetic engineering fixtures awaiting expert review.
+F0–C1 are merged. A locally packaged `evidenceops` CLI exists in this repository; it is
+not an npm/PyPI release. A 127.0.0.1 fixture-only demo exists; it is not a public host.
+There is no live legal data connector. Offline fixtures are not CourtListener coverage.
+The 200-case corpus is synthetic engineering fixtures awaiting expert review.
 
 ## Representation limits (always)
 

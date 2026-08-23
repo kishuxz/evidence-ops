@@ -37,6 +37,8 @@ src/*.egg-info/
 *.log
 *.tgz
 
-# Test / type output
+.evidenceops/
+.evidenceops-demo/
+.evidenceops-demo.pid
 .mypy_cache/
 htmlcov/
