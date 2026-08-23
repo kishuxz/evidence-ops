@@ -34,4 +34,5 @@ Record durable choices that later nodes must not silently reverse.
 | 0016 | Optional Neo4j adapter | Accepted with G3 |
 | 0017 | Durable offline research workflow | Accepted with W1 |
 | 0018 | Authority-version monitoring and redlines | Accepted with M1 |
-| 0019 | Failure attribution and research replay | Proposed with P1 |
+| 0019 | Failure attribution and research replay | Accepted with P1 |
+| 0020 | Reviewer evidence view | Proposed with U1 |
