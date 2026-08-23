@@ -1,5 +1,5 @@
 {
-  "name": "@evidenceops/graph",
+  "name": "@evidenceops/graph-neo4j",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -9,7 +9,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@evidenceops/contracts": "workspace:*"
+    "@evidenceops/graph": "workspace:*",
+    "neo4j-driver": "^5.28.1"
   },
   "devDependencies": {
     "@types/node": "^20.19.0",

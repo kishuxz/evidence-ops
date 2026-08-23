@@ -31,4 +31,14 @@ export {
   failureReplay,
   reviewerTrace,
 } from "./traverse.js";
-export { inMemoryConformance, runAdapterConformance } from "./conformance.js";
+export { inMemoryConformance, runAdapterConformance, type ConformanceFailure } from "./conformance.js";
+export {
+  envelope,
+  makeEdge,
+  sampleSupportingGraph,
+} from "./sample.js";
+export {
+  runAsyncAdapterConformance,
+  syncToAsync,
+  type AsyncGraphStore,
+} from "./async.js";
