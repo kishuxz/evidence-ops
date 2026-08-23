@@ -61,4 +61,11 @@ describe("claims and verdict contract", () => {
     expect(read("docs/EVALUATION_CORPUS.md").toLowerCase()).toContain("not");
     expect(read("docs/EVALUATION_CORPUS.md").toLowerCase()).toContain("expert-reviewed");
   });
+
+  it("does not describe constructed 200/200 as legal reliability", () => {
+    const q2 = read("docs/Q2_ROBUSTNESS_REPORT.md").toLowerCase();
+    expect(q2).toContain("not legal reliability");
+    expect(q2).toContain("not hallucination elimination");
+    expect(q2).toContain("never counted as correct");
+  });
 });

@@ -1,0 +1,22 @@
+{
+  "name": "@evidenceops/robustness",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Robustness evaluations. Do not overstate 200/200.",
+  "type": "module",
+  "exports": { ".": "./src/index.ts" },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@evidenceops/eval": "workspace:*",
+    "@evidenceops/retrieve": "workspace:*",
+    "@evidenceops/verify": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.0",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}
