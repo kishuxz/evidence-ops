@@ -8,6 +8,16 @@ from evidenceops.contracts.catalog import (
 )
 from evidenceops.contracts.ids import content_hash, stable_id
 
+
+def proposition_admissible_in_memo(verdict: str, reviewer_state: str) -> bool:
+    catalog = load_catalog()
+    if verdict not in catalog["verdicts"]:
+        return False
+    if reviewer_state != "accepted":
+        return False
+    return verdict not in {"UNRESOLVED", "NO_SUPPORT"}
+
+
 __all__ = [
     "SCHEMA_ID",
     "SCHEMA_VERSION",
@@ -16,5 +26,6 @@ __all__ = [
     "content_hash",
     "load_catalog",
     "node_type_def",
+    "proposition_admissible_in_memo",
     "stable_id",
 ]
