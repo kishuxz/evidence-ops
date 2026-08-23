@@ -292,6 +292,22 @@ importers:
         specifier: ^3.2.4
         version: 3.2.7(@types/node@20.19.43)
 
+  packages/review-pack:
+    dependencies:
+      '@evidenceops/eval':
+        specifier: workspace:*
+        version: link:../eval
+    devDependencies:
+      '@types/node':
+        specifier: ^20.19.0
+        version: 20.19.43
+      typescript:
+        specifier: ^5.9.2
+        version: 5.9.3
+      vitest:
+        specifier: ^3.2.4
+        version: 3.2.7(@types/node@20.19.43)
+
   packages/reviewer:
     dependencies:
       '@evidenceops/auth':
