@@ -149,6 +149,28 @@ importers:
         specifier: ^3.2.4
         version: 3.2.7(@types/node@20.19.43)
 
+  packages/replay:
+    dependencies:
+      '@evidenceops/eval':
+        specifier: workspace:*
+        version: link:../eval
+      '@evidenceops/workflow':
+        specifier: workspace:*
+        version: link:../workflow
+    devDependencies:
+      '@evidenceops/retrieve':
+        specifier: workspace:*
+        version: link:../retrieve
+      '@types/node':
+        specifier: ^20.19.0
+        version: 20.19.43
+      typescript:
+        specifier: ^5.9.2
+        version: 5.9.3
+      vitest:
+        specifier: ^3.2.4
+        version: 3.2.7(@types/node@20.19.43)
+
   packages/retrieve:
     devDependencies:
       '@types/node':
