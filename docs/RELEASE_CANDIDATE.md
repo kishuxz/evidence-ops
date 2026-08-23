@@ -23,7 +23,7 @@ GitHub release, or deploy a publicly accessible hosted demo.
 | U1 | #27 | #28 | Reviewer evidence view |
 | O1 | #29 | #30 | Telemetry baseline / runbooks |
 | Q1 | #31 | #32 | 200-case corpus / offline baselines |
-| Z1 | #33 | (this PR) | Security, claims, legal-data, DevEx reviews |
+| Z1 | #33 | #34 | Security, claims, legal-data, DevEx reviews |
 
 ## Remaining blocked dependencies
 
