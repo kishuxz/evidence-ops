@@ -17,8 +17,8 @@ Do not mark a node `merged` until the squash merge is on `main` and CI is green.
 | V1 | Passage, quotation, pinpoint, and proposition verification | R1, E1 | merged | #15 | #18 |
 | G2 | In-memory graph, JSON/JSONL, validation and traversals | G1 | merged | #7 | #11 |
 | G3 | Neo4j adapter and conformance suite | G2 | merged | #17 | #20 |
-| W1 | Durable research/checkpoint/retry/budget workflow | X1, V1, G2 | in_progress | #21 | |
-| M1 | Authority monitoring, diff, and impact traversal | W1 | blocked | | |
+| W1 | Durable research/checkpoint/retry/budget workflow | X1, V1, G2 | merged | #21 | #22 |
+| M1 | Authority monitoring, diff, and impact traversal | W1 | in_progress | #23 | |
 | P1 | Failure attribution and research replay | W1, E1 | blocked | | |
 | A1 | Auth, tenant/matter RBAC, audit and approval policies | S1 | merged | #9 | #12 |
 | U1 | Reviewer evidence, conflicts, and redline dashboard | W1, M1, A1 | blocked | | |

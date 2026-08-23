@@ -32,4 +32,5 @@ Record durable choices that later nodes must not silently reverse.
 | 0014 | Deterministic proposition verification | Accepted with V1 |
 | 0015 | Offline hybrid retrieval | Accepted with X1 |
 | 0016 | Optional Neo4j adapter | Accepted with G3 |
-| 0017 | Durable offline research workflow | Proposed with W1 |
+| 0017 | Durable offline research workflow | Accepted with W1 |
+| 0018 | Authority-version monitoring and redlines | Proposed with M1 |
