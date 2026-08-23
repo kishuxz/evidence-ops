@@ -1,9 +1,17 @@
-# Evaluation corpus (E1)
+# Evaluation corpus
 
-The initial corpus is original synthetic text for tests. It is **not** live
-CourtListener coverage and is **not** the 200-case v0.1 target.
+The v0.1 corpus is **200 synthetic constructed single-author engineering
+fixtures awaiting expert review**.
 
-Privileged client material is forbidden. Every case carries annotation provenance
-and a content hash of its snapshot.
+It is **not**:
 
-See `@evidenceops/eval` and ADR 0010.
+- expert-reviewed
+- independently reviewed
+- naturally occurring
+- public-source CourtListener/RECAP data
+- a live citator snapshot
+
+The original eight cases remain the foundation slice. Privileged client material
+is forbidden.
+
+See `@evidenceops/eval`, ADR 0010, and ADR 0022.
