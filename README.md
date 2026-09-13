@@ -34,17 +34,34 @@ Recent empirical work reports recurring failures in legal AI:
 The system is evaluated against those failure modes instead of subjective answer quality.
 External papers motivate the benchmark; they are not EvidenceOps performance claims.
 
-## Repository status
+## What this repository demonstrates
+
+EvidenceOps is a production-shaped prototype for evidence-driven legal AI:
+
+- temporal evidence graphs for propositions, authorities, citations, versions, and reviews;
+- deterministic citation, quotation, jurisdiction, staleness, and support verdict checks;
+- offline synthetic evaluation fixtures with generated baseline reports;
+- tenant/matter authorization boundaries, approval policy checks, audit events, and telemetry;
+- a local-only fixture demo and locally packaged CLI for inspection.
 
 Implementation nodes F0–E2 are merged; Q2 robustness is in this release candidate.
 C1 is a locally packaged CLI, **not** published to npm. D2 is a 127.0.0.1 demo,
-**not** a public host. I1 and live CourtListener remain blocked. **Z2 public
-release, package publish, and public hosted demo are not authorized.**
+**not** a public host. I1 and live CourtListener remain blocked. Public repository
+visibility does **not** authorize package publication, a public hosted demo, live
+CourtListener/RECAP access, or use with privileged/client data.
 
 Licensed under Apache License 2.0. See `LICENSE` and `docs/LICENSE_STATUS.md`.
 The networked CourtListener adapter is blocked; see ADR 0008.
 
 See `docs/PROGRESS.md` and `docs/RELEASE_CANDIDATE.md`.
+
+## Current limitations
+
+- Not legal advice, not a lawyer, and not a substitute for attorney review.
+- Not hallucination-free and not a comprehensive citator.
+- The 200-case corpus is synthetic engineering fixtures awaiting expert review.
+- The live CourtListener/RECAP adapter is blocked by ADR 0008.
+- The demo binds to `127.0.0.1` and uses fixture data only.
 
 ## Verification
 
